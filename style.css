@@ -1,10 +1,10 @@
 /* General */
 :root {
-    --blanco: #D40600;
-    --gris: #152959;
-    --gris_claro: #345BA3;
-    --negro: #EBEBEB;
-    --primary: violet;
+    --blanco: #EBEBEB;
+    --rojo: #D40600;
+    --azul: #345BA3;
+    --negro: #000000;
+    --azul2: #345BA3;
     --secundary: green;
 
     /* Colores de HM */
@@ -196,3 +196,10 @@ footer {
 }
 
 /* Fin Productos */
+
+
+.navegacion img {
+    height: 200px;
+    width: 200px;
+
+}
