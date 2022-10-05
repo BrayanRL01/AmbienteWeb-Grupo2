@@ -1,11 +1,18 @@
 /* General */
 :root {
-    --blanco: white;
-    --gris: grey;
-    --gris_claro: lightgrey;
-    --negro: black;
+    --blanco: #D40600;
+    --gris: #152959;
+    --gris_claro: #345BA3;
+    --negro: #EBEBEB;
     --primary: violet;
     --secundary: green;
+
+    /* Colores de HM */
+    --logo: #D40600;
+    --color1: #152959;
+    --color2: #345BA3;
+    --color3: #EBEBEB;
+
 }
 
 body {
