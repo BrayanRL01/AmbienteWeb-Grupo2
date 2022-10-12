@@ -46,25 +46,11 @@ h3 {
     text-align: center;
 }
 
-/* p {
-    color: blueviolet;
-    font-size: 25px;
-} */
-
-/* 
-Navegación
-*/
-
-.nav_bg {
-    background-color: var(--secundary);
-
-}
-
 .nav_principal {
     display: flex;
     justify-content: space-between;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 130px;
     margin-left: 150px;
 }
 
@@ -86,7 +72,7 @@ Navegación
 
 .divLogo{
     position: absolute;
-    margin-top: 20px;
+    margin-top: 35px;
     margin-left: 60px;
 }
 
@@ -97,14 +83,16 @@ Navegación
 
 }
 .navImg{
-    max-width: 100px;
-    max-height: 100px;
-    margin-left: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 90px;
+    margin-top: 40px;
 }
+
 .segNav{
     position: absolute;
     margin-left: 1000px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     
 }
 .logo{
