@@ -7,16 +7,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <header>
-        <div class="divLogo">
-        <img class="logo" src="img/logo.png" alt="logo">
-    </div>
+
         <div class="segNav">
+            <img class="logo" src="img/logo.png" alt="logo">
             <nav>
+
                 <a href="listadeseos.html"><img class="navImg" src="img/MicrosoftTeams-image (2).png" alt="logoDeseos"></a>
                 <a href="carritocompras.html"><img class="navImg" src="img/MicrosoftTeams-image (4).png" alt="logoCarrito"></a>
                 <a href="cuenta.html"><img class="navImg" src="img/MicrosoftTeams-image (3).png" alt="logoPersona"></a>
@@ -34,8 +38,116 @@
         </div>
 
     </header>
+    <div style="margin-left:400px ; margin-top: 100px;" class="wrapper">
+        <div class="slider" id="slider">
+          <ul class="slides">
+            <li class="slide" id="slide1">
+              <a href="#">
+                <img src="img/MicrosoftTeams-image (7).png" alt="photo 1">
+              </a>
+            </li>
+            <li class="slide" id="slide2">
+              <a href="#">
+                <img src="img/MicrosoftTeams-image (6).png" alt="photo 2">
+              </a>
+            </li>
+            <li class="slide" id="slide3">
+              <a href="#">
+                <img src="img/MicrosoftTeams-image (7).png" alt="photo 3">
+              </a>
+            </li>
+            <li class="slide" id="slide4">
+              <a href="#">
+                <img src="img/MicrosoftTeams-image (6).png" alt="photo 4">
+              </a>
+            </li>
+            <li class="slide" id="slide5">
+              <a href="#">
+                 <img src="img/MicrosoftTeams-image (7).png" alt="photo 5">
+              </a>
+            </li>
+            <li class="slide">
+              <a href="#">
+                <img src="" alt="photo 1">
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <a href="carritocompras.html"><button style=" margin-left:635px ; margin-bottom:30px ;" type="button" class="btn btn-outline-warning">Añadir a carrito de compras</button></a>
 
 
+      <footer class="bg-light text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #55acee;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-twitter"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-linkedin"></i></a>
+            <!-- Github -->
+            <a
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="#!"
+              role="button"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">HYM.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
 </body>
 
+
 </html>
+

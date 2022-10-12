@@ -5,7 +5,7 @@
     --azul: #345BA3;
     --negro: #000000;
     --azul2: #345BA3;
-    --secundary: green;
+
 
     /* Colores de HM */
     --logo: #D40600;
@@ -49,8 +49,7 @@ h3 {
 .nav_principal {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    margin-top: 130px;
+    position: relative;
     margin-left: 150px;
 }
 
@@ -64,14 +63,14 @@ h3 {
 
 .nav_principal a:hover {
     color: var(--negro);
-    background-color: var(--primary);
+    background-color: gainsboro;
 }
 
 
 
 
 .divLogo{
-    position: absolute;
+    position: relative;
     margin-top: 35px;
     margin-left: 60px;
 }
@@ -86,16 +85,144 @@ h3 {
     max-width: 40px;
     max-height: 40px;
     margin-left: 90px;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .segNav{
-    position: absolute;
-    margin-left: 1000px;
-    margin-bottom: 150px;
-    
+    display:flex;
+    justify-content:space-between;
+    position: relative;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 .logo{
     max-width: 90px;
     max-height: 90px;
+    margin-bottom: 40px;
+}
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+	95% { transform: translateX(-500%); }
+	100% { transform: translateX(-500%); }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100vw;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+.slide img {
+	width: 50%;
+	vertical-align: top;
+}
+
+.slide a {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+
+.caption {
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 8vw;
+	position: absolute;
+	bottom: 8vw;
+	right: 4vw;
+}
+
+.slide:target {
+	animation-name: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+.slider-controler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+    
+}
+
+@media only screen and (min-width: 1200px) {
+	.slide {
+		width: 1200px;
+	}
+
+	.caption {
+		font-size: 96px;
+		bottom: 96px;
+		right: 50px;
+	}
 }
