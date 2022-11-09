@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -21,29 +22,42 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<style>
+.navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    .btn {
+    padding: 10px 20px;
+    background-color:#dd4b39;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+    margin-left: 120px;
+  }
+  </style>
+</head>
+<body>
 
-    <header>
+<div class="jumbotron">
+  <div class="container text-center">
+    <a href="index.html" class="LinkLogo"><h1>H&M</h1></a>     
+    <p>Costa Rica</p>
+  </div>
+</div>
 
-        <div class="segNav">
-            <img class="logo" src="img/logo.png" alt="logo">
-            <nav>
-                <a href="listadeseos.html"><img class="navImg" src="img/MicrosoftTeams-image (2).png"
-                        alt="logoDeseos"></a>
-                <a href="carritocompras.html"><img class="navImg" src="img/MicrosoftTeams-image (4).png"
-                        alt="logoCarrito"></a>
-                <a href="cuenta.html"><img class="navImg" src="img/MicrosoftTeams-image (3).png" alt="logoPersona"></a>
-            </nav>
-        </div>
 
-        <div>
-            <nav class="nav_principal contenedor">
-                <a href="index.html">Inicio</a>
-                <a href="ropahombre.html">Ropa Hombre</a>
-                <a href="ropamujer.html">Ropa Mujer</a>
-                <a href="ropaniños.html">Ropa Niño</a>
-            </nav>
-        </div>
-    </header>
 
     <form action="action_page.php">
         <div class="container">
