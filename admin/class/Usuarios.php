@@ -1,9 +1,8 @@
 <?php
 include "Conexion.php";
 
-class Usuario
+class Usuarios
 {
-    // Atributos
     protected $USUARIO_ID;
     protected $CEDULA;
     protected $ID_PROVINCIA;
@@ -14,8 +13,17 @@ class Usuario
     protected $TELEFONO;
     protected $CONTRASENA;
 
-    public function __construct($USUARIO_ID, $CEDULA, $ID_PROVINCIA, $NOMBRE, $PRIMER_APELLIDO, $SEGUNDO_APELLIDO, $EMAIL, $TELEFONO, $CONTRASENA)
-    {
+    public function __construct(
+        $USUARIO_ID,
+        $CEDULA,
+        $ID_PROVINCIA,
+        $NOMBRE,
+        $PRIMER_APELLIDO,
+        $SEGUNDO_APELLIDO,
+        $EMAIL,
+        $TELEFONO,
+        $CONTRASENA
+    ) {
         $this->usuario_id = $USUARIO_ID;
         $this->cedula = $CEDULA;
         $this->id_provincia = $ID_PROVINCIA;
@@ -28,12 +36,12 @@ class Usuario
     }
 
     // Metodos
-    public static function getByEmail($nombre) // Carlos777
+    public static function getByEmail($correo) // Carlos777
     {
         $conexion = new Conexion();
         $conexion->conectar();
 
-        $query = "SELECT * FROM USUARIOS WHERE NOMBRE = ?";
+        $query = "SELECT * FROM USUARIOS WHERE EMAIL = ?";
 
         $prepare = mysqli_prepare($conexion->link, $query);
 
@@ -42,16 +50,16 @@ class Usuario
         // i => entero
         // b => binarios
 
-        $prepare->bind_param("s", $nombre);
+        $prepare->bind_param("s", $correo);
         $prepare->execute();
 
         $respuesta = $prepare->get_result();
-        $dataArray = $respuesta->fetch_row();
+        $dataArray = $respuesta->fetch_row(); // [1, "Carlos777", "777"]
 
         $conexion->cerrar();
 
         if (!empty($dataArray)) {
-            return new Usuario(
+            return new Usuarios(
                 $dataArray[0],
                 $dataArray[1],
                 $dataArray[2],
@@ -67,7 +75,7 @@ class Usuario
         return false;
     }
 
-    public function validarClave($CONTRASENA): bool
+    public function ValidarContraseña($CONTRASENA): bool
     {
         // if ($this->clave == $clave) {
         //     return true;
@@ -78,13 +86,13 @@ class Usuario
         return $this->contrasena == $CONTRASENA;
     }
 
-    public function getCedula(): string
-    {
-        return $this->cedula;
-    }
-
-    public function getNombre(): int
+    public function getNombre(): string
     {
         return $this->nombre;
+    }
+
+    public function getPrimerApellido(): int
+    {
+        return $this->primer_apellido;
     }
 }

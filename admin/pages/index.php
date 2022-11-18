@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <form action="../controller/login.php" method="post">
+        <form action="../controller/login.php" method="POST">
             <div class="container">
                 <h1>Iniciar sesión</h1>
                 <label for="email"><b>Email</b></label>

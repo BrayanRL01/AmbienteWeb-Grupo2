@@ -1,3 +1,17 @@
+ajax();
+
+function ajax() {
+  let http = new XMLHttpRequest();
+  http.open("POST", "php/productos.php");
+  http.send(null);
+
+  http.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      let data = JSON.parse(this.responseText);
+      cargarProductos(data);
+    }
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   // Variables

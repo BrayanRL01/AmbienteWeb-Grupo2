@@ -1,5 +1,5 @@
 <?php
-include "../class/Usuario.php";
+include "../class/Usuarios.php";
 
 if (!isset($_POST["email"])) {
     header("location: ../pages/index.php?error=1");
@@ -16,18 +16,18 @@ if ($_POST["contrasena"] == "") {
     exit();
 }
 
-$USUARIO = Usuario::getByEmail($_POST["email"]);
+$Usuarios = Usuarios::getByEmail($_POST["email"]);
 
 // echo "<pre>";
 // var_dump($usuario);
 // echo "</pre>";
 
-if (!$EMAIL) {
+if (!$Usuarios) {
     header("location: ../pages/index.php?error=3");
     exit();
 }
 
-if ($USUARIO->getByEmail($_POST["contrasena"])) {
+if ($Usuarios->ValidarContraseña($_POST["contrasena"])) {
     header("location: ../pages/admin.php");
     exit();
 } else {
