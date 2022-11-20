@@ -74,7 +74,7 @@
 <div class= "panel-primary">
 
   <div class="panel-heading"><h2 style="margin-left: 600px;" >Ofertas de la semana</h2></div>
-  <div class="panel-body"><img src="img/i-2409-cG.25109.1.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+  <div class="panel-body"><img src="../../img/rs_1024x759-220210112952-1024-HM-LT-21022.webp" class="img-responsive" style="width:100%" alt="Image"></div>
   <a href="ofertas.html"><button style="margin-left: 700px; margin-bottom:40px ; margin-top:30px ; padding-left: 40px;padding-right: 40px;" class="btn">Ver ofertas</button></a>
 </div>
 
