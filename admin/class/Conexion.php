@@ -2,14 +2,15 @@
 
 class Conexion
 {
-    public $link;
+    protected $link;
 
-    public function conectar() {
-        $this->link = mysqli_connect("localhost", "root", "brl092022", "tiendahm");
+    public function conectar()
+    {
+        $this->link = mysqli_connect("localhost", "root", "brl092022", "TIENDAHM");
     }
 
-    public function cerrar() {
+    public function cerrar()
+    {
         $this->link->close();
     }
-
 }

@@ -28,6 +28,10 @@ if (!$Usuarios) {
 }
 
 if ($Usuarios->ValidarContraseña($_POST["contrasena"])) {
+    session_start();
+    $_SESSION["login"] = true;
+    $_SESSION["email"] = $Usuarios->getEmail();
+    $_SESSION["nombre"] = $Usuarios->getNombre();
     header("location: ../pages/admin.php");
     exit();
 } else {

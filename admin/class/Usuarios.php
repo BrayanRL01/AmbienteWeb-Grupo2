@@ -1,11 +1,10 @@
 <?php
 include "Conexion.php";
 
-class Usuarios
+class Usuarios extends Conexion
 {
     protected $USUARIO_ID;
     protected $CEDULA;
-    protected $ID_PROVINCIA;
     protected $NOMBRE;
     protected $PRIMER_APELLIDO;
     protected $SEGUNDO_APELLIDO;
@@ -16,7 +15,6 @@ class Usuarios
     public function __construct(
         $USUARIO_ID,
         $CEDULA,
-        $ID_PROVINCIA,
         $NOMBRE,
         $PRIMER_APELLIDO,
         $SEGUNDO_APELLIDO,
@@ -26,7 +24,6 @@ class Usuarios
     ) {
         $this->usuario_id = $USUARIO_ID;
         $this->cedula = $CEDULA;
-        $this->id_provincia = $ID_PROVINCIA;
         $this->nombre = $NOMBRE;
         $this->primer_apellido = $PRIMER_APELLIDO;
         $this->segundo_apellido = $SEGUNDO_APELLIDO;
@@ -54,7 +51,7 @@ class Usuarios
         $prepare->execute();
 
         $respuesta = $prepare->get_result();
-        $dataArray = $respuesta->fetch_row(); // [1, "Carlos777", "777"]
+        $dataArray = $respuesta->fetch_row();
 
         $conexion->cerrar();
 
@@ -67,8 +64,7 @@ class Usuarios
                 $dataArray[4],
                 $dataArray[5],
                 $dataArray[6],
-                $dataArray[7],
-                $dataArray[8]
+                $dataArray[7]
             );
         }
 
@@ -89,6 +85,11 @@ class Usuarios
     public function getNombre(): string
     {
         return $this->nombre;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
     }
 
     public function getPrimerApellido(): int
