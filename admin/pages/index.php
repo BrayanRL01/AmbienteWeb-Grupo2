@@ -14,33 +14,29 @@
 
 <body>
 
-
-    <body>
-
-        <div class="jumbotron">
-            <div class="container text-center">
-                <a href="index.html" class="LinkLogo">
-                    <h1>H&M</h1>
-                </a>
-                <p>Costa Rica</p>
-            </div>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <a href="index.html" class="LinkLogo">
+                <h1>H&M</h1>
+            </a>
         </div>
+    </div>
 
-        <form action="../controller/login.php" method="POST">
-            <div class="container">
-                <h1>Iniciar sesión</h1>
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Correo Electrónico" name="email" id="email" required>
+    <form action="../controller/login.php" method="POST">
+        <div class="container">
+            <h1>Iniciar sesión</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Correo Electrónico" name="email" id="email" required>
 
-                <label for="contrasena"><b>Contraseña</b></label>
-                <input type="password" placeholder="Escriba su contraseña" name="contrasena" id="contrasena" required>
+            <label for="contrasena"><b>Contraseña</b></label>
+            <input type="password" placeholder="Escriba su contraseña" name="contrasena" id="contrasena" required>
 
-                <button type="submit" class="registerbtn">Ingresar</button>
-            </div>
-            <div class="container signin">
-                <p>¿No posee una cuenta? <a href="login.html">Registrarse</a>.</p>
-            </div>
-        </form>
-    </body>
+            <button type="submit" class="registerbtn">Ingresar</button>
+        </div>
+        <div class="container signin">
+            <p>¿No posee una cuenta? <a href="registro.php">Registrarse.</a></p>
+        </div>
+    </form>
+</body>
 
 </html>

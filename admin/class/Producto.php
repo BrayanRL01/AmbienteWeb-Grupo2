@@ -36,12 +36,58 @@ class Producto extends Conexion
     }
 
     // Metodos
-    public static function getAll()
+    public static function getHombre()
     {
         $conexion = new Conexion();
         $conexion->conectar();
 
         $query = "SELECT * FROM PRODUCTOS WHERE ID_CATEGORIA = 1";
+
+        $prepare = mysqli_prepare($conexion->link, $query);
+        $prepare->execute();
+
+        $respuesta = $prepare->get_result();
+        $dataArray = $respuesta->fetch_all();
+
+        $productos = [];
+
+        foreach ($dataArray as $data) {
+            $producto = new Producto($data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]);
+            array_push($productos, $producto);
+        }
+
+        return $productos;
+    }
+
+    public static function getMujer()
+    {
+        $conexion = new Conexion();
+        $conexion->conectar();
+
+        $query = "SELECT * FROM PRODUCTOS WHERE ID_CATEGORIA = 2";
+
+        $prepare = mysqli_prepare($conexion->link, $query);
+        $prepare->execute();
+
+        $respuesta = $prepare->get_result();
+        $dataArray = $respuesta->fetch_all();
+
+        $productos = [];
+
+        foreach ($dataArray as $data) {
+            $producto = new Producto($data[0], $data[1], $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8]);
+            array_push($productos, $producto);
+        }
+
+        return $productos;
+    }
+
+    public static function getNiño()
+    {
+        $conexion = new Conexion();
+        $conexion->conectar();
+
+        $query = "SELECT * FROM PRODUCTOS WHERE ID_CATEGORIA = 3";
 
         $prepare = mysqli_prepare($conexion->link, $query);
         $prepare->execute();

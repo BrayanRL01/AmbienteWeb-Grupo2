@@ -49,9 +49,9 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="admin.php">Home</a></li>
-          <li class="active"><a href="ropahombre.html">Info Ropa Hombre</a></li>
+          <li><a href="ropahombre.php">Info Ropa Hombre</a></li>
           <li><a href="ropamujer.php">Info Ropa Mujer</a></li>
-          <li><a href="ropaniños.php">Info Ropa Niño</a></li>
+          <li class="active"><a href="ropaniños.php">Info Ropa Niño</a></li>
         </ul>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -65,13 +65,12 @@
 
   <section class="contenedor contenido">
 
-    <h2>Productos</h2>
-    <button class="boton" href="nuevoproducto.php">Nuevo Producto</button>
-    <?php $productos = Producto::getHombre(); ?>
-
+    <h2 class="texto">Productos</h2>
+    <button type="button" href="nuevoproducto.php" class="btn btn-secondary btn-lg">Agregar producto</button>
+    <?php $productos = Producto::getNiño(); ?>
     <?php if (empty($productos)) {  ?>
       <div>
-        <p class="text-primary">No hay productos almacenados en el sistema.</p>
+        <p class="texto">No hay productos almacenados en el sistema.</p>
       </div>
     <?php } else { ?>
 
@@ -110,14 +109,6 @@
       </table>
 
     <?php } ?>
-
-
-
-
-
-
-
-
 
     <br><br>
 

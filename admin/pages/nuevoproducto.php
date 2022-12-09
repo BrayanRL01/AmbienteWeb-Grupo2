@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <?php
     session_start();
     if (!isset($_SESSION["login"])) {
@@ -43,10 +42,9 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="ropahombre.html">Ropa Hombre</a></li>
-                    <li><a href="ropamujer.html">Ropa Mujer</a></li>
-                    <li><a href="ropaniños.html">Ropa Niño</a></li>
-                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li class="active"><a href="ropahombre.php">Info Ropa Hombre</a></li>
+                    <li><a href="ropamujer.php">Info Ropa Mujer</a></li>
+                    <li><a href="ropaniños.php">Info Ropa Niño</a></li>
                 </ul>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -60,53 +58,50 @@
 
     <section class="container">
 
-        <div class="h_ordenes">
-            <h2>Datos del producto</h2>
-            <div class="b_ordenes">
-                <a class="boton" href="ropahombre.php">Lista de productos (Hombre)</a>
-            </div>
-        </div>
-
+        <h2>Datos del producto</h2>
         <form class="form" action="../controller/producto.php" method="post">
-            <legend>Nuevo producto (Hombre)</legend>
+            <legend>Nuevo producto</legend>
             <div>
-                <!-- <div class="form_campo">
-                    <label for="id_producto">Nombre de la imagen</label>
-                    <input id="id_producto" name="id_producto" class="form_text" type="text" placeholder="id producto">
-                </div> -->
-                <div class="form_campo">
-                    <label for="id_tipo">Tipo de Prenda</label>
-                    <input id="id_tipo" name="id_tipo" class="form_text" type="text" placeholder="Tipo de Prenda">
+                <div class="mb-3">
+                    <label for="id_tipo" class="id_tipo">Tipo de Prenda (1. Camisa, 2. Pantalón)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="id_tipo" placeholder="Tipo de Prenda">
                 </div>
-                <div class="form_campo">
-                    <label for="id_categoria">Categoría (Hombre 1, Mujer 2, Niños 3)</label>
-                    <input class="form_text" name="id_categoria" id="id_categoria" placeholder="Categoría del Producto" type="text">
+                <br>
+                <div class="mb-3">
+                    <label for="id_categoria" class="id_categoria">Categorías (1. Hombre, 2. Mujer, 3. Niño/a)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="id_categoria" placeholder="Categoría del Producto">
                 </div>
-                <div class="form_campo">
-                    <label for="id_marca">Marca del Producto (1. H&M)</label>
-                    <input id="id_marca" name="id_marca" class="form_text" type="text" placeholder="Marcas">
+                <br>
+                <div class="mb-3">
+                    <label for="id_marca" class="id_marca">Marcas (1. H&M)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="id_marca" placeholder="Marca del Producto">
                 </div>
-                <div class="form_campo">
-                    <label for="imagen">Nombre de imagen</label>
-                    <input id="imagen" name="imagen" class="form_text" type="text" placeholder="Imagen">
+                <br>
+                <div class="mb-3">
+                    <label for="imagen" class="imagen">Imagen del Producto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="imagen" placeholder="Nombre de la imagen">
                 </div>
-                <div class="form_campo">
-                    <label for="nombre_prenda">Nombre de la Prenda</label>
-                    <input class="form_text" name="nombre_prenda" id="nombre_prenda" placeholder="Nombre Prenda" type="text">
+                <br>
+                <div class="mb-3">
+                    <label for="nombre_prenda" class="nombre_prenda">Nombre del Producto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="nombre_prenda" placeholder="Nombre de la prenda">
                 </div>
-
-                <div class="form_campo">
-                    <label for="precio">Precio del producto</label>
-                    <input id="precio" name="precio" class="form_text" type="text" placeholder="Precio">
+                <br>
+                <div class="mb-3">
+                    <label for="precio" class="precio">Precio del Producto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="precio" placeholder="Precio de la prenda">
                 </div>
-                <div class="form_campo">
-                    <label for="talla">Talla</label>
-                    <input id="talla" name="talla" class="form_text" type="text" placeholder="Talla">
+                <br>
+                <div class="mb-3">
+                    <label for="talla" class="talla">Talla del Producto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="talla" placeholder="Talla de la prenda">
                 </div>
-                <div class="form_campo">
-                    <label for="cantidad">Cantidad de productos</label>
-                    <input class="form_text" name="cantidad" id="cantidad" placeholder="Cantidad" type="text">
+                <br>
+                <div class="mb-3">
+                    <label for="cantidad" class="cantidad">Cantidad de Productos</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="cantidad" placeholder="Cantidad de prendas">
                 </div>
+                <br>
                 <div>
                     <button class="boton enviar" type="submit">Crear</button>
                 </div>

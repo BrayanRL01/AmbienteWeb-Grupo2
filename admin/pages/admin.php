@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
   <title>HYM</title>
@@ -9,18 +12,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
     }
 
-    /* Remove the jumbotron's default bottom margin */
     .jumbotron {
       margin-bottom: 0;
     }
 
-    /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
       padding: 25px;
@@ -58,11 +58,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="ropahombre.html">Ropa Hombre</a></li>
-          <li><a href="ropamujer.html">Ropa Mujer</a></li>
-          <li><a href="ropaniños.html">Ropa Niño</a></li>
-          <li><a href="ofertas.html">Ofertas</a></li>
+          <li class="active"><a href="admin.php">Home</a></li>
+          <li><a href="ropahombre.php">Info Ropa Hombre</a></li>
+          <li><a href="ropamujer.php">Info Ropa Mujer</a></li>
+          <li><a href="ropaniños.php">Info Ropa Niño</a></li>
+          <li><a href="ofertas.php">Ofertas</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="listadeseos.html"><span class="glyphicon glyphicon-heart"></span> Favs</a></li>
@@ -84,7 +84,6 @@
   </div>
 
   <footer class="bg-light text-center text-white">
-    <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
       <section class="mb-4">
@@ -105,16 +104,12 @@
         <!-- Github -->
         <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i class="fab fa-github"></i></a>
       </section>
-      <!-- Section: Social media -->
     </div>
-    <!-- Grid container -->
 
-    <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2020 Copyright:
       <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
     </div>
-    <!-- Copyright -->
   </footer>
 
 </body>

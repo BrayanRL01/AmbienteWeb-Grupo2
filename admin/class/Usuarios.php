@@ -71,15 +71,48 @@ class Usuarios extends Conexion
         return false;
     }
 
+    public function crearUsuario()
+    {
+        $this->conectar();
+
+        $query = "INSERT INTO USUARIOS (CEDULA, NOMBRE, PRIMER_APELLIDO, SEGUNDO_APELLIDO, EMAIL, 
+        TELEFONO, CONTRASENA) VALUES(?, ?, ?, ?, ?, ?, ?)";
+
+        $prepare = mysqli_prepare($this->link, $query);
+
+        // s => cadenas de texto
+        // d => doble
+        // i => entero
+        // b => binarios
+
+        $prepare->bind_param(
+            "sssssis",
+            $this->cedula,
+            $this->nombre,
+            $this->primer_apellido,
+            $this->segundo_apellido,
+            $this->email,
+            $this->telefono,
+            $this->contrasena
+        );
+
+        if ($prepare->execute()) {
+            $this->cerrar();
+            return "OK";
+        } else {
+            $this->cerrar();
+            return "Error: " . $prepare->error;
+        }
+    }
+
     public function ValidarContraseña($CONTRASENA): bool
     {
-        // if ($this->clave == $clave) {
-        //     return true;
-        // }else{
-        //     return false;
-        // }
-
         return $this->contrasena == $CONTRASENA;
+    }
+
+    public function getCedula(): string
+    {
+        return $this->telefono;
     }
 
     public function getNombre(): string
@@ -92,8 +125,18 @@ class Usuarios extends Conexion
         return $this->email;
     }
 
-    public function getPrimerApellido(): int
+    public function getPrimerApellido(): string
     {
         return $this->primer_apellido;
+    }
+
+    public function getSegundoApellido(): string
+    {
+        return $this->segundo_apellido;
+    }
+
+    public function getTelefono(): int
+    {
+        return $this->telefono;
     }
 }
