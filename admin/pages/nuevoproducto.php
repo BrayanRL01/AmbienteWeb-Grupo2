@@ -41,10 +41,12 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="ropahombre.php">Info Ropa Hombre</a></li>
+                    <li><a href="admin.php">Home</a></li>
+                    <li><a href="ropahombre.php">Info Ropa Hombre</a></li>
                     <li><a href="ropamujer.php">Info Ropa Mujer</a></li>
                     <li><a href="ropaniños.php">Info Ropa Niño</a></li>
+                    <li class="active"><a href="nuevoproducto.php">Crear Producto</a></li>
+
                 </ul>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

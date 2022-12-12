@@ -62,7 +62,7 @@
           <li><a href="ropahombre.php">Info Ropa Hombre</a></li>
           <li><a href="ropamujer.php">Info Ropa Mujer</a></li>
           <li><a href="ropaniños.php">Info Ropa Niño</a></li>
-          <li><a href="ofertas.php">Ofertas</a></li>
+          <li><a href="nuevoproducto.php">Crear Producto</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="listadeseos.html"><span class="glyphicon glyphicon-heart"></span> Favs</a></li>

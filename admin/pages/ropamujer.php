@@ -8,8 +8,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!-- CSS only -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  <style>
+    .texto{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
   <?php
   session_start();
   if (!isset($_SESSION["login"])) {
@@ -47,6 +52,8 @@
           <li><a href="ropahombre.php">Info Ropa Hombre</a></li>
           <li class="active"><a href="ropamujer.php">Info Ropa Mujer</a></li>
           <li><a href="ropaniños.php">Info Ropa Niño</a></li>
+          <li><a href="nuevoproducto.php">Crear Producto</a></li>
+
         </ul>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -60,13 +67,12 @@
 
   <section class="contenedor contenido">
 
-    <h2>Productos</h2>
-    <button type="button" href="nuevoproducto.php" class="btn btn-secondary btn-lg">Agregar producto</button>
+    <h2 class="texto">Productos</h2>
     <?php $productos = Producto::getMujer(); ?>
 
     <?php if (empty($productos)) {  ?>
       <div>
-        <p>No hay productos almacenados en el sistema.</p>
+        <p class="texto">No hay productos almacenados en el sistema.</p>
       </div>
     <?php } else { ?>
 

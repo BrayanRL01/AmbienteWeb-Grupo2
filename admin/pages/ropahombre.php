@@ -52,6 +52,8 @@
           <li class="active"><a href="ropahombre.html">Info Ropa Hombre</a></li>
           <li><a href="ropamujer.php">Info Ropa Mujer</a></li>
           <li><a href="ropaniños.php">Info Ropa Niño</a></li>
+          <li><a href="nuevoproducto.php">Crear Producto</a></li>
+
         </ul>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -66,7 +68,6 @@
   <section class="contenedor contenido">
 
     <h2>Productos</h2>
-    <button class="boton" href="nuevoproducto.php">Nuevo Producto</button>
     <?php $productos = Producto::getHombre(); ?>
 
     <?php if (empty($productos)) {  ?>
@@ -110,14 +111,6 @@
       </table>
 
     <?php } ?>
-
-
-
-
-
-
-
-
 
     <br><br>
 

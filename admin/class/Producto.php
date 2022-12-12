@@ -140,7 +140,6 @@ class Producto extends Conexion
         }
     }
 
-
     public function getIDProducto(): int
     {
         return $this->id_producto;
@@ -184,5 +183,24 @@ class Producto extends Conexion
     public function getCantidad(): int
     {
         return $this->cantidad;
+    }
+
+    public function EliminarProducto()
+    {
+        $this->conectar();
+
+        $query = "DELETE FROM PRODUCTOS WHERE ID_PRODUCTO = ?
+         AND ID_CATEGORIA = 1";
+
+        $prepare = mysqli_prepare($this->link, $query);
+
+        if ($prepare->execute()) {
+            $this->cerrar();
+            return "OK";
+            header("location: ropahombre.php");
+        } else {
+            $this->cerrar();
+            return "Error: " . $prepare->error;
+        }
     }
 }
